@@ -2,13 +2,13 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-        <title>{% block title %}Project{% endblock %}</title>
+        <title>{% block title %}Lansole{% endblock %}</title>
 
         <!--[if lt IE 9]>
           <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
         <![endif]-->
 
-        <link rel="stylesheet" href="http://twitter.github.com/bootstrap/1.3.0/bootstrap.min.css">
+        <link rel="stylesheet" href="http://twitter.github.com/bootstrap/1.4.0/bootstrap.min.css">
         {% block stylesheets %}{% endblock %}
         <link rel="shortcut icon" href="{{ asset('favicon.ico') }}" />
     </head>
@@ -16,12 +16,12 @@
         <div class="topbar">
             <div class="fill">
                 <div class="container">
-                    <a class="brand" href="#">Project</a>
+                    <a class="brand" href="#">Lansole</a>
                     {% block navigation %}
                     <ul class="nav">
-                        <li class="active"><a href="#">Home</a></li>
+                        <li><a href="#">Overview</a></li>
                         <li><a href="#about">About</a></li>
-                        <li><a href="#contact">Contact</a></li>
+                        <li class="active"><a href="{{ path('LansoleBlogBundle_homepage') }}">Blog</a></li>
                     </ul>
                     {% endblock %}
                 </div>
@@ -31,7 +31,7 @@
         <!-- Main hero unit for a primary marketing message or call to action -->
         <div class="hero-unit">
             <div class="container">
-              <h1>Project, from Maria Lansole</h1>
+              <h1>Bundles, from Maria Lansole</h1>
               <p>Vestibulum id ligula porta felis euismod semper. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</p>
               <p><a class="btn primary large">Learn more &raquo;</a></p>
             </div>
