@@ -14,40 +14,34 @@
     </head>
     <body>
         <div class="topbar">
-            <div class="fill">
+            <div class="topbar-inner">
                 <div class="container">
-                    <a class="brand" href="#">Lansole</a>
+                    <a class="brand" href="{{ path('LansoleProjectBundle_homepage') }}">Lansole</a>
                     {% block navigation %}
                     <ul class="nav">
-                        <li><a href="#">Overview</a></li>
-                        <li><a href="#about">About</a></li>
-                        <li class="active"><a href="{{ path('LansoleBlogBundle_homepage') }}">Blog</a></li>
+                        <li class="active"><a href="{{ path('LansoleProjectBundle_homepage') }}">Overview</a></li>
+                        <li><a href="{{ path('LansoleProjectBundle_homepage') }}#about">About</a></li>
+                        <li><a href="{{ path('LansoleBlogBundle_homepage') }}">Blog</a></li>
                     </ul>
                     {% endblock %}
                 </div>
             </div>
         </div>
 
-        <!-- Main hero unit for a primary marketing message or call to action -->
         <div class="hero-unit">
             <div class="container">
-              <h1>Bundles, from Maria Lansole</h1>
-              <p>Vestibulum id ligula porta felis euismod semper. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</p>
-              <p><a class="btn primary large">Learn more &raquo;</a></p>
+              <br />
+              <h1>Lansole, from Maria Lansole</h1>
+              <br />
+              <p>Lansole is a toolkit based on Symfony 2 components to help building sites out of the box.</p>
+              <p>Find more about this toolkit and the available list of bundles in the about section.</p>
+              <br />
+              <a class="btn primary large" href="{{ path('LansoleProjectBundle_homepage') }}#about">Learn more &raquo;</a>
             </div>
         </div>
 
         <div class="container">
-            <!-- Example row -->
-            {% block body %}
-            <div class="row">
-              <div class="span16">
-                  <h1>Heading</h1>
-                  <p>Etiam porta sem malesuada magna mollis euismod. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</p>
-                  <p><a class="btn" href="#">View details &raquo;</a></p>
-              </div>
-            </div>
-            {% endblock %}
+            {% block body %}{% endblock %}
 
             <footer>
               <p>&copy; Maria Lansole {{ "now"|date("Y") }}</p>

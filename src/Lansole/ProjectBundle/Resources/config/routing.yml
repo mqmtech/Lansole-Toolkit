@@ -1,0 +1,3 @@
+LansoleProjectBundle_homepage:
+    pattern:  /
+    defaults: { _controller: LansoleProjectBundle:Page:index }

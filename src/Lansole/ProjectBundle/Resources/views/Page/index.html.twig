@@ -1,0 +1,28 @@
+{% extends '::base.html.twig' %}
+
+{% block body %}
+<div id="about" class="row">
+    <div class="span16">
+        <div class="page-header">
+            <h1>About <small>All about Lansole toolkit</small></h1>
+        </div>
+    </div>
+    <div class="span11">
+        <p>This toolkit will help you build a site out of box. All the components use <a href="http://twitter.github.com/bootstrap/" target="_blank">Bootstrap, from Twitter</a> for front-end templating.</p>
+        <h4>The components available are:</h4>
+        <dl>
+          <dt>Blog Bundle</dt>
+          <dd>A simple Blog plataform</dd>
+        </dl>
+    </div>
+    <div class="span5">
+      <p>All the bundles are at <a href="https://github.com/marialansole" target="_blank">github</a>. Feel free to use, fork and contribute.</p>
+      <p>Follow Lansole on <a href="http://twitter.com/#!/lansole" target="_blank">twitter</a> and stay tunned!</p>
+      <a href="https://twitter.com/lansole" class="twitter-follow-button">Follow @lansole</a>
+    </div>
+</div>
+{% endblock %}
+
+{% block javascripts %}
+    <script src="//platform.twitter.com/widgets.js" type="text/javascript"></script>
+{% endblock %}

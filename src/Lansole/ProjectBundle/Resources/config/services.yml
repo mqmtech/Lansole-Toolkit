@@ -1,0 +1,7 @@
+parameters:
+#    lansole_project.example.class: Lansole\ProjectBundle\Example
+
+services:
+#    lansole_project.example:
+#        class: %lansole_project.example.class%
+#        arguments: [@service_id, "plain_value", %parameter%]
