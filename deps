@@ -67,9 +67,20 @@
    git=https://github.com/stof/StofDoctrineExtensionsBundle.git
    target=/bundles/Stof/DoctrineExtensionsBundle
 
+[pagerfanta]
+  git=http://github.com/whiteoctober/Pagerfanta.git
+
+[PagerfantaBundle]
+  git=http://github.com/whiteoctober/WhiteOctoberPagerfantaBundle.git
+  target=/bundles/WhiteOctober/PagerfantaBundle
+
 [doctrine-fixtures]
     git=http://github.com/doctrine/data-fixtures.git
 
 [DoctrineFixturesBundle]
     git=http://github.com/symfony/DoctrineFixturesBundle.git
     target=/bundles/Symfony/Bundle/DoctrineFixturesBundle
+
+[FOSUserBundle]
+    git=git://github.com/FriendsOfSymfony/FOSUserBundle.git
+    target=bundles/FOS/UserBundle

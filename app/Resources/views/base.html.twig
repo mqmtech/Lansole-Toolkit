@@ -9,6 +9,8 @@
         <![endif]-->
 
         <link rel="stylesheet" href="http://twitter.github.com/bootstrap/1.4.0/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
+
         {% block stylesheets %}{% endblock %}
         <link rel="shortcut icon" href="{{ asset('favicon.ico') }}" />
     </head>
@@ -47,7 +49,11 @@
               <p>&copy; Maria Lansole {{ "now"|date("Y") }}</p>
             </footer>
 
-            {% block javascripts %}{% endblock %}
+            {% block javascripts %}
+                <script src="{{ asset('bundles/lansolecore/js/bootstrap/twipsy.js') }}"></script>
+                <script src="{{ asset('bundles/lansolecore/js/bootstrap/alerts.js') }}"></script>
+                <script src="{{ asset('bundles/lansolecore/js/core.js') }}"></script>
+            {% endblock %}
         </div> <!-- /container -->
     </body>
 </html>
