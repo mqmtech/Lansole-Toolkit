@@ -1,3 +1,0 @@
-LansoleCoreBundle_homepage:
-    pattern:  /hello/{name}
-    defaults: { _controller: LansoleCoreBundle:Default:index }

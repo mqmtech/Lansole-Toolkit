@@ -2,58 +2,12 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-        <title>{% block title %}Lansole{% endblock %}</title>
-
-        <!--[if lt IE 9]>
-          <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-        <![endif]-->
-
-        <link rel="stylesheet" href="http://twitter.github.com/bootstrap/1.4.0/bootstrap.min.css">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
-
+        <title>{% block title %}Welcome!{% endblock %}</title>
         {% block stylesheets %}{% endblock %}
         <link rel="shortcut icon" href="{{ asset('favicon.ico') }}" />
     </head>
     <body>
-        <div class="topbar">
-            <div class="topbar-inner">
-                <div class="container">
-                    <a class="brand" href="{{ path('LansoleProjectBundle_homepage') }}">Lansole</a>
-                    {% block navigation %}
-                    <ul class="nav">
-                        <li class="active"><a href="{{ path('LansoleProjectBundle_homepage') }}">Overview</a></li>
-                        <li><a href="{{ path('LansoleProjectBundle_homepage') }}#about">About</a></li>
-                        <li><a href="{{ path('LansoleBlogBundle_homepage') }}">Blog</a></li>
-                    </ul>
-                    {% endblock %}
-                </div>
-            </div>
-        </div>
-
-        <div class="hero-unit">
-            <div class="container">
-              <br />
-              <h1>Lansole, from Maria Lansole</h1>
-              <br />
-              <p>Lansole is a toolkit based on Symfony 2 components to help building sites out of the box.</p>
-              <p>Find more about this toolkit and the available list of bundles in the about section.</p>
-              <br />
-              <a class="btn primary large" href="{{ path('LansoleProjectBundle_homepage') }}#about">Learn more &raquo;</a>
-            </div>
-        </div>
-
-        <div class="container">
-            {% block body %}{% endblock %}
-
-            <footer>
-              <p>&copy; Maria Lansole {{ "now"|date("Y") }}</p>
-            </footer>
-
-            {% block javascripts %}
-                <script src="{{ asset('bundles/lansolecore/js/bootstrap/twipsy.js') }}"></script>
-                <script src="{{ asset('bundles/lansolecore/js/bootstrap/alerts.js') }}"></script>
-                <script src="{{ asset('bundles/lansolecore/js/core.js') }}"></script>
-            {% endblock %}
-        </div> <!-- /container -->
+        {% block body %}{% endblock %}
+        {% block javascripts %}{% endblock %}
     </body>
 </html>

@@ -1,3 +1,6 @@
 [submodule "src/Lansole/BlogBundle"]
 	path = src/Lansole/BlogBundle
 	url = git://github.com/marialansole/BlogBundle.git
+[submodule "src/Lansole/CoreBundle"]
+	path = src/Lansole/CoreBundle
+	url = git@github.com:marialansole/CoreBundle.git

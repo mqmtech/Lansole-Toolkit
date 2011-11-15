@@ -1,7 +1,0 @@
-parameters:
-#    lansole_core.example.class: Lansole\CoreBundle\Example
-
-services:
-#    lansole_core.example:
-#        class: %lansole_core.example.class%
-#        arguments: [@service_id, "plain_value", %parameter%]

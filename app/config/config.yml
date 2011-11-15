@@ -1,6 +1,8 @@
 imports:
     - { resource: parameters.ini }
     - { resource: security.yml }
+    - { resource: @LansoleBlogBundle/Resources/config/config.yml }
+    - { resource: @LansoleCoreBundle/Resources/config/config.yml }
 
 framework:
     #esi:             ~
