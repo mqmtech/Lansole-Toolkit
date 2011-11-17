@@ -7,6 +7,10 @@
         <link rel="shortcut icon" href="{{ asset('favicon.ico') }}" />
     </head>
     <body>
+        {% include 'LansoleProjectBundle:Page:navigation.html.twig' %}
+
+        {% include 'LansoleProjectBundle:Page:hero.html.twig' %}
+
         {% block body %}{% endblock %}
         {% block javascripts %}{% endblock %}
     </body>

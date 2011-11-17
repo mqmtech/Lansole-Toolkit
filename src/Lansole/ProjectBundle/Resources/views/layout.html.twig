@@ -1,44 +1,8 @@
-{% extends lansole ? 'LansoleCoreBundle::layout.html.twig' : '::base.html.twig' %}
+{% extends 'LansoleCoreBundle::layout.html.twig' %}
 
 {% block title %}Lansole{% endblock %}
 
 {% block body %}
-<div class="topbar">
-    <div class="topbar-inner">
-        <div class="container">
-            <a class="brand" href="{{ path('LansoleProjectBundle_homepage') }}">Lansole</a>
-            {% block navigation %}
-            <ul class="nav">
-                <li class="active"><a href="{{ path('LansoleProjectBundle_homepage') }}">Overview</a></li>
-                <li><a href="{{ path('LansoleProjectBundle_homepage') }}#about">About</a></li>
-                <li><a href="{{ path('LansoleBlogBundle_homepage') }}">Blog</a></li>
-            </ul>
-            <ul class="nav secondary-nav">
-                <li>
-                    {% if is_granted("IS_AUTHENTICATED_REMEMBERED") %}
-                        <a href="{{ path('fos_user_security_logout') }}">Logout</a>
-                    {% else %}
-                        <a href="{{ path('fos_user_security_login') }}">Login</a>
-                    {% endif %}
-                </li>
-            </ul>
-            {% endblock %}
-        </div>
-    </div>
-</div>
-
-<div class="hero-unit">
-    <div class="container">
-      <br />
-      <h1>Lansole, from Maria Lansole</h1>
-      <br />
-      <p>Lansole is a toolkit based on Symfony 2 components to help building sites out of the box.</p>
-      <p>Find more about this toolkit and the available list of bundles in the about section.</p>
-      <br />
-      <a class="btn primary large" href="{{ path('LansoleProjectBundle_homepage') }}#about">Learn more &raquo;</a>
-    </div>
-</div>
-
 <div class="container">
     {% block container %}{% endblock %}
 
@@ -46,12 +10,4 @@
       <p>&copy; Maria Lansole {{ "now"|date("Y") }}</p>
     </footer>
 </div>
-{% endblock %}
-
-{% block javascripts %}
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
-    <script src="{{ asset('bundles/lansolecore/js/bootstrap/twipsy.js') }}"></script>
-    <script src="{{ asset('bundles/lansolecore/js/bootstrap/alerts.js') }}"></script>
-    <script src="{{ asset('bundles/lansolecore/js/wysiwyg/wysiwyg.js') }}"></script>
-    <script src="{{ asset('bundles/lansolecore/js/core.js') }}"></script>
 {% endblock %}

@@ -29,6 +29,10 @@ LansoleBlogBundle:
     resource: "@LansoleBlogBundle/Resources/config/routing.yml"
     prefix:   /blog
 
+LansolePagesBundle:
+    resource: "@LansolePagesBundle/Resources/config/routing.yml"
+    prefix:   /
+
 # Internal routing configuration to handle ESI
 #_internal:
 #   resource: "@FrameworkBundle/Resources/config/routing/internal.xml"
