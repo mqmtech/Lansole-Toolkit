@@ -9,20 +9,24 @@ class Builder extends ContainerAware
 {
     public function mainMenu(FactoryInterface $factory)
     {
-        $menu = $factory->createItem('root');
+        $menu = $factory->createItem('main');
         $menu->setCurrentUri($this->container->get('request')->getRequestUri());
         $menu->setAttributes(array('class' => 'nav'));
 
         $menu->addChild('Overview', array('route' => 'LansoleProjectBundle_homepage'));
-//        $menu->addChild('About', array('uri' => $this->container->get('router')->generate('LansoleProjectBundle_homepage') . '#about'));
         $menu->addChild('Blog', array('route' => 'LansoleBlogBundle_homepage'));
+        // $menu->addChild('About', array('uri' => $this->container->get('router')->generate('LansoleProjectBundle_homepage') . '#about'));
+
+        if ($contact = $this->container->get('router')->match('/contact')) {
+          $menu->addChild('Contact', array('route' => $contact['_route'], 'routeParameters' => array('path' => $contact['path'])));
+        }
 
         return $menu;
     }
 
     public function authenticationMenu(FactoryInterface $factory)
     {
-        $menu = $factory->createItem('root');
+        $menu = $factory->createItem('authentication');
         $menu->setCurrentUri($this->container->get('request')->getRequestUri());
         $menu->setAttributes(array('class' => 'nav secondary-nav'));
 
