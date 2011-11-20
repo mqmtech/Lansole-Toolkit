@@ -1,0 +1,42 @@
+{% extends "LansoleProjectBundle::layout.html.twig" %}
+
+{% block container %}
+<div id="about" class="row">
+    <div class="span16">
+        {% if error %}
+            <div class="alert-message error">
+                <p><strong>Oops!</strong> {{ error }}.</p>
+            </div>
+        {% endif %}
+
+        <form action="{{ path("fos_user_security_check") }}" method="post" class="form-stacked">
+            <div class="clearfix">
+                <label for="username">{{ 'security.login.username'|trans({}, 'FOSUserBundle') }}</label>
+
+                <div class="input">
+                    <input type="text" id="username" name="_username" value="{{ last_username }}" />
+                </div>
+            </div>
+
+            <div class="clearfix">
+                <label for="password">{{ 'security.login.password'|trans({}, 'FOSUserBundle') }}</label>
+
+                <div class="input">
+                    <input type="password" id="password" name="_password" />
+                </div>
+            </div>
+
+            <div class="clearfix">
+                <div class="input">
+                  <input type="checkbox" id="remember_me" name="_remember_me" value="on" />
+                  <span>{{ 'security.login.remember_me'|trans({}, 'FOSUserBundle') }}</span>
+                </div>
+            </div>
+
+            <div class="actions">
+                <button type="submit" id="_submit" class="btn primary" name="_submit">{{ 'security.login.submit'|trans({}, 'FOSUserBundle') }}</button>
+            </div>
+        </form>
+    </div>
+</div>
+{% endblock %}

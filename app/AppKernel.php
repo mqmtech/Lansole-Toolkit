@@ -20,11 +20,12 @@ class AppKernel extends Kernel
             new Lansole\ProjectBundle\LansoleProjectBundle(),
             new Lansole\BlogBundle\LansoleBlogBundle(),
             new Lansole\CoreBundle\LansoleCoreBundle(),
+            new Lansole\PagesBundle\LansolePagesBundle(),
+            new Lansole\UserBundle\LansoleUserBundle(),
             new Symfony\Bundle\DoctrineFixturesBundle\DoctrineFixturesBundle(),
             new Stof\DoctrineExtensionsBundle\StofDoctrineExtensionsBundle(),
             new WhiteOctober\PagerfantaBundle\WhiteOctoberPagerfantaBundle(),
             new FOS\UserBundle\FOSUserBundle(),
-            new Lansole\PagesBundle\LansolePagesBundle(),
             new Knp\Bundle\MenuBundle\KnpMenuBundle(),
         );
 
