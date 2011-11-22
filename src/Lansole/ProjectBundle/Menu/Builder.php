@@ -17,9 +17,9 @@ class Builder extends ContainerAware
         $menu->addChild('Blog', array('route' => 'LansoleBlogBundle_homepage'));
         // $menu->addChild('About', array('uri' => $this->container->get('router')->generate('LansoleProjectBundle_homepage') . '#about'));
 
-        if ($contact = $this->container->get('router')->match('/contact')) {
-          $menu->addChild('Contact', array('route' => $contact['_route'], 'routeParameters' => array('path' => $contact['path'])));
-        }
+        // if ($contact = $this->container->get('router')->match('/contact')) {
+        //   $menu->addChild('Contact', array('route' => $contact['_route'], 'routeParameters' => array('path' => $contact['path'])));
+        // }
 
         return $menu;
     }
